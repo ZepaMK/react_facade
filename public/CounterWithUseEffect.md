@@ -1,6 +1,6 @@
 ```
 const CounterWithUseEffect = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [calculation, setCalculation] = useState(0);
 
   useEffect(() => {
@@ -9,8 +9,10 @@ const CounterWithUseEffect = () => {
 
   return (
      <div>
-        <p className="border border-black p-4">{count}</p>
-        <p className="border border-black p-4">{calculation}</p>
+        <p className="border border-black p-4">count = {count}</p>
+        <p className="border border-black mt-2 p-4">
+          {count} x 2 = {calculation}
+        </p>
         <button
           onClick={() => setCount(count + 1)}
           className="border border-black p-2 mt-4"

@@ -26,6 +26,13 @@ export default function Hooks() {
       <div className="py-4 px-16">
         <h1 className="text-[1.5rem] font-semibold">useEffect()</h1>
         <div className="h-[1px] bg-black w-full" />
+        <p className="w-1/2 italic">
+          This section contains a example of a old class component without using
+          UseEffect() and a example using UseEffect(). The result of these code
+          snippets are the same, namely a counter and calculator, but the code
+          written is different. We can conclude that UseEffect components use
+          less code and can implement complex logic easier.
+        </p>
         <div className="flex justify-evenly flex-col md:flex-row">
           <CounterWithUseEffect />
           <CounterWithoutUseEffect />
