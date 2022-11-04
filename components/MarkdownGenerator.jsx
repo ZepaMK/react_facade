@@ -11,10 +11,9 @@ const MarkdownGenerator = ({ markdown }) => {
   }, []);
 
   return (
-    <ReactMarkdown
-      className="text-[0.6rem] border border-black mb-4 p-1 bg-[#232323] text-white"
-      children={content}
-    ></ReactMarkdown>
+    <ReactMarkdown className="text-[0.6rem] border border-black mb-4 p-1 bg-[#232323] text-white">
+      {content}
+    </ReactMarkdown>
   );
 };
 
