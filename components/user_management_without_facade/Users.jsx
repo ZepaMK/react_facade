@@ -65,7 +65,7 @@ const Users = () => {
   return (
     <div>
       <p className="my-4 font-semibold">Code:</p>
-      <MarkdownGenerator markdown={"CounterReused.md"} />
+      <MarkdownGenerator markdown={"WithoutFacade.md"} />
       <p className="my-4 font-semibold">Output:</p>
       <UserPanel
         users={users}

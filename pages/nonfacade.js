@@ -22,7 +22,9 @@ export default function Nonfacade() {
           . In the report the code will be compared to the code used with a
           façade pattern.
         </p>
-        <Users />
+        <div>
+          <Users />
+        </div>
       </div>
     </div>
   );
