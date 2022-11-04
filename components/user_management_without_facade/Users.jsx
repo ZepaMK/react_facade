@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserPanel from "./UserPanel";
 import AddEditUser from "./AddEditUser";
+import MarkdownGenerator from "../MarkdownGenerator";
 
 const Users = () => {
   // Dummy data
@@ -63,6 +64,9 @@ const Users = () => {
 
   return (
     <div>
+      <p className="my-4 font-semibold">Code:</p>
+      <MarkdownGenerator markdown={"WithoutFacade.md"} />
+      <p className="my-4 font-semibold">Output:</p>
       <UserPanel
         users={users}
         onEdit={openEditUser}

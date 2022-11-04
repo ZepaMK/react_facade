@@ -1,5 +1,4 @@
 import Users from "../components/user_management_without_facade/Users";
-import MarkdownGenerator from "../components/MarkdownGenerator";
 
 export default function Nonfacade() {
   return (
@@ -23,9 +22,6 @@ export default function Nonfacade() {
           . In the report the code will be compared to the code used with a
           façade pattern.
         </p>
-        <p className="my-4 font-semibold">Code:</p>
-        <MarkdownGenerator markdown={"WithoutFacade.md"} />
-        <p className="my-4 font-semibold">Output:</p>
         <Users />
       </div>
     </div>
