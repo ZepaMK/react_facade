@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import UserPanel from "./UserPanel";
-import AddEditUser from "./AddEditUser";
-import MarkdownGenerator from "../MarkdownGenerator";
+import { useState } from "react";
 
-const Users = () => {
-  // Dummy data
+const useUsersManagement = () => {
   const [users, setUsers] = useState([
+    // Dummy data
     {
       _id: 5022,
       firstName: "Zep",
@@ -19,8 +16,6 @@ const Users = () => {
       banned: false,
     },
   ]);
-
-  //useState()
   const [isAddUserOpen, setAddUserVisibility] = useState(false);
   const [isEditUserOpen, setEditUserVisibility] = useState(false);
   const [editedUser, setEditedUser] = useState({});
@@ -31,10 +26,21 @@ const Users = () => {
     setAddUserVisibility(false);
   };
 
-  //Open editer
+  const openAddUser = () => {
+    setAddUserVisibility(true);
+  };
+
+  const closeAddUser = () => {
+    setAddUserVisibility(false);
+  };
+
   const openEditUser = (user) => {
     setEditUserVisibility(true);
     setEditedUser(user);
+  };
+
+  const closeEditUser = () => {
+    setEditUserVisibility(false);
   };
 
   //Edit user logic
@@ -62,40 +68,20 @@ const Users = () => {
     setUsers(users.filter((user) => user._id !== userId));
   };
 
-  return (
-    <div>
-      <p className="my-4 font-semibold">Code:</p>
-      <MarkdownGenerator markdown={"WithoutFacade.md"} />
-      <p className="my-4 font-semibold">Output:</p>
-      <UserPanel
-        users={users}
-        onEdit={openEditUser}
-        onBan={banUser}
-        onDelete={deleteUser}
-      />
-      <AddEditUser
-        isOpen={isAddUserOpen}
-        onClose={() => setAddUserVisibility(false)}
-        addorEditUser={addUser}
-        edit={false}
-      />
-      <AddEditUser
-        isOpen={isEditUserOpen}
-        onClose={() => setEditUserVisibility(false)}
-        addorEditUser={editUser}
-        edit={true}
-        openEditUser={openEditUser}
-        user={editedUser}
-      />
-
-      <button
-        className="border mb-8 border-black p-2 mt-2 float-right"
-        onClick={() => setAddUserVisibility(true)}
-      >
-        Add user
-      </button>
-    </div>
-  );
+  return {
+    users,
+    isAddUserOpen,
+    isEditUserOpen,
+    editedUser,
+    openAddUser,
+    addUser,
+    closeAddUser,
+    openEditUser,
+    editUser,
+    closeEditUser,
+    banUser,
+    deleteUser,
+  };
 };
 
-export default Users;
+export default useUsersManagement;

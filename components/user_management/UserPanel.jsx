@@ -1,5 +1,3 @@
-import React from "react";
-
 const UserPanel = ({ users, onEdit, onBan, onDelete }) => {
   return (
     <div className="overflow-x-auto relative">

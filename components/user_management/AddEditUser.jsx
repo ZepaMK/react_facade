@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AddEditUser = ({ isOpen, onClose, addorEditUser, edit, user }) => {
   const [values, setValues] = useState({

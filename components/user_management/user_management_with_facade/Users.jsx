@@ -1,4 +1,9 @@
-```
+import React from "react";
+import UserPanel from "../UserPanel";
+import AddEditUser from "../AddEditUser";
+import MarkdownGenerator from "../../MarkdownGenerator";
+import useUserManagement from "./useUserManagement";
+
 const Users = () => {
   const {
     users,
@@ -17,6 +22,9 @@ const Users = () => {
 
   return (
     <div>
+      <p className="my-4 font-semibold">Code:</p>
+      <MarkdownGenerator markdown={"WithFacade.md"} />
+      <p className="my-4 font-semibold">Output:</p>
       <UserPanel
         users={users}
         onEdit={openEditUser}
@@ -49,4 +57,3 @@ const Users = () => {
 };
 
 export default Users;
-```

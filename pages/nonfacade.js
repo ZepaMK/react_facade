@@ -1,4 +1,4 @@
-import Users from "../components/user_management_without_facade/Users";
+import Users from "../components/user_management/user_management_without_facade/Users";
 
 export default function Nonfacade() {
   return (
@@ -20,7 +20,7 @@ export default function Nonfacade() {
             here
           </a>
           . In the report the code will be compared to the code used with a
-          façade pattern.
+          façade pattern. The output can be found below so go ahead and test it!
         </p>
         <div>
           <Users />
