@@ -14,7 +14,7 @@ export default function Facade() {
           application is shown on this page, the rest of the code can be found{" "}
           <a
             className="underline text-blue-600"
-            href="https://github.com/ZepaMK/react_facade/tree/main/components"
+            href="https://github.com/ZepaMK/react_facade/tree/main/components/user_management"
           >
             here
           </a>

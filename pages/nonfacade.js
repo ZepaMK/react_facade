@@ -15,7 +15,7 @@ export default function Nonfacade() {
           found{" "}
           <a
             className="underline text-blue-600"
-            href="https://github.com/ZepaMK/react_facade/tree/main/components"
+            href="https://github.com/ZepaMK/react_facade/tree/main/components/user_management"
           >
             here
           </a>
