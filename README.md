@@ -6,7 +6,7 @@ This repository is part of a practical case study for the Amsterdam University o
 2. Run ```bash npm install``` in the terminal of the root folder.
 3. Run ```bash npm run dev``` to run the application on http://localhost:3000/
 
-Written by Zep Swijghuisen 
+Author: *Zep Swijghuisen*
 
 
 
